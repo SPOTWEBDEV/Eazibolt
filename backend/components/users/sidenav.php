@@ -37,8 +37,8 @@
                            <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="./deposite.php">Depsoite</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./withdrawal.php">Withdrawal</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="#">Deposite Table</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./withdrawalStatus.php">Withdrawal Status</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="./depositStatus.php">Deposit Status</a></li>
                            </ul>
                   </div>
          </li>
@@ -54,11 +54,19 @@
                            <i class="mdi mdi-chart-bar menu-icon"></i>
                   </a>
          </li>
+
          <li class="nav-item">
-                  <a class="nav-link" href="">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#ui-shopping" aria-expanded="false" aria-controls="ui-basic">
                            <span class="menu-title">Online Shoping</span>
-                           <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                           <i class="menu-arrow"></i>
+                           <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                   </a>
+                  <div class="collapse" id="ui-shopping">
+                           <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" href="./onlineshopping.php">Shoppping</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Cart list</a></li>
+                           </ul>
+                  </div>
          </li>
          <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
@@ -72,6 +80,20 @@
                                     <li class="nav-item"> <a class="nav-link" href=""> Support </a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./Reportdriver.php"> Report Driver </a></li>
                                     <li class="nav-item"> <a class="nav-link" href=""> Job </a></li>
+                           </ul>
+                  </div>
+         </li>
+         <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#general-driver" aria-expanded="false" aria-controls="general-pages">
+                           <span class="menu-title">Driver</span>
+                           <i class="menu-arrow"></i>
+                           <i class="mdi mdi-medical-bag menu-icon"></i>
+                  </a>
+                  <div class="collapse" id="general-driver">
+                           <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" href="./appyDriver.php"> Appy for driver </a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="./Driver/loginDriver.php"> Login as a Driver </a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="./Driver/application.php"> Application Status </a></li>
                            </ul>
                   </div>
          </li>

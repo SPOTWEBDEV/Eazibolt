@@ -8,6 +8,7 @@ $login_id = $_SESSION['login_id'];
 
 $userDetail = mysqli_query($conection, "SELECT * FROM `clients` WHERE `id`='$login_id'");
 while ($row = mysqli_fetch_assoc($userDetail)) {
+         $userLogin = $row['id'];
          $username = $row['username'];
          $email = $row['email'];
          $img = $row['image'];
