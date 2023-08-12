@@ -124,9 +124,9 @@ if (isset($_POST['cartBtn'])) {
                                                                                                                                        <div style="width: 50%; float:left;  display:flex; justify-content:flex-end;" class="mt-2"><button style="border: none;width:fit-content" class="bg-primary btn-lg text-white">$304</button></div>
                                                                                                                               </div> -->
                                                                                                                               </ul>
-                                                                                                                              <div class="card-body">
+                                                                                                                              <a href="./productship.php?product=<?php echo $row['id']  ?>" class="card-body">
                                                                                                                                        <button style="border: none;width:100%" class="bg-primary btn-lg text-white">Buy: $<?php echo $row['amount']  ?></button>
-                                                                                                                              </div>
+                                                                                                                              </a>
                                                                                                                      </div>
 
                                                                                                             </div>
