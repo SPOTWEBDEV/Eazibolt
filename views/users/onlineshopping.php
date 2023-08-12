@@ -5,6 +5,27 @@ require('../../backend/config/connection.php');
 // INCLUDE USER SESSION AUTH AND DETAILS
 require('../../backend/config/users/session.php');
 
+if (isset($_POST['cartBtn'])) {
+         $cardId = $_POST['cardId'];
+
+
+         $check = mysqli_query($conection , "SELECT * FROM `cart` WHERE `user_id`='$userLogin' AND `card_id`='$cardId' ");
+
+         if(mysqli_num_rows($check)){
+                  echo "<script>alert('This item is already add to cart')</script>";
+         }else{
+                  $insertCart = mysqli_query($conection, "INSERT INTO `cart`(`user_id`, `card_id`) VALUES ('$userLogin','$cardId')");
+
+                  if ($insertCart) {
+                           echo "<script>alert('SUCESSFULLY')</script>";
+                  } else {
+                           echo "<script>alert('NOT-SUCESSFULLY')</script>";
+                  }
+         }
+
+         
+}
+
 
 ?>
 
@@ -77,25 +98,44 @@ require('../../backend/config/users/session.php');
                                                                         <div class="card">
                                                                                  <div class="card-body">
                                                                                           <div class="row">
-                                                                                                   <div class="col">
-                                                                                                            <div class="card" style="width: 18rem;">
-                                                                                                                     <img src="../../assets/images/author-1.jpg" class="card-img-top" alt="...">
-                                                                                                                     <div class="card-body">
-                                                                                                                              <h5 class="card-title">Card title</h5>
-                                                                                                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                                                                   <?php
+
+                                                                                                   $select = mysqli_query($conection, "SELECT * FROM `items`WHERE `count`>0");
+                                                                                                   while ($row = mysqli_fetch_assoc($select)) { ?>
+
+                                                                                                            <div class="col">
+                                                                                                                     <div class="card" style="width: 18rem;">
+                                                                                                                              <img style="height: 250px !important;" src="../../upload/item/<?php echo $row['image'] ?>" class="card-img-top" alt="...">
+                                                                                                                              <div class="card-body">
+                                                                                                                                       <h5 class="card-title"><?php echo $row['name']  ?></h5>
+                                                                                                                                       <p class="card-text"><?php echo $row['des']  ?></p>
+                                                                                                                              </div>
+                                                                                                                              <ul class="list-group list-group-flush">
+                                                                                                                                       <li class="list-group-item">Product Rating:⭐⭐⭐⭐</li>
+                                                                                                                                       <li class="list-group-item">Number of Buyer: <?php echo $row['sold'] ?></li>
+                                                                                                                                       <li class="list-group-item">Price : $<?php echo $row['amount']  ?></li>
+                                                                                                                                       <li class="list-group-item d-flex">Cart : <form method="POST">
+                                                                                                                                                         <input type="hidden" name="cardId" value="<?php echo $row['id'] ?>">
+                                                                                                                                                         <button style="margin-left: 20px !important;" class="btn btn-sm bg-primary text-white ml-2 cartBtn" id="cartBtn" name="cartBtn" cardId="<?php echo $row['id'] ?>">Add to cart</button>
+                                                                                                                                                </form>
+                                                                                                                                       </li>
+                                                                                                                                       <!-- <div style="display:flex; width:100%; justify-content:between !important; align-items:center; gap:10px">
+                                                                                                                                       <div style="width:50%; font-size:20px; text-transform:capitalize">price</div>
+                                                                                                                                       <div style="width: 50%; float:left;  display:flex; justify-content:flex-end;" class="mt-2"><button style="border: none;width:fit-content" class="bg-primary btn-lg text-white">$304</button></div>
+                                                                                                                              </div> -->
+                                                                                                                              </ul>
+                                                                                                                              <div class="card-body">
+                                                                                                                                       <button style="border: none;width:100%" class="bg-primary btn-lg text-white">Buy: $<?php echo $row['amount']  ?></button>
+                                                                                                                              </div>
                                                                                                                      </div>
-                                                                                                                     <ul class="list-group list-group-flush">
-                                                                                                                              <li class="list-group-item">An item</li>
-                                                                                                                              <li class="list-group-item">A second item</li>
-                                                                                                                              <li class="list-group-item">A third item</li>
-                                                                                                                     </ul>
-                                                                                                                     <div class="card-body">
-                                                                                                                              <a href="#" class="card-link">Card link</a>
-                                                                                                                              <a href="#" class="card-link">Another link</a>
-                                                                                                                     </div>
+
                                                                                                             </div>
 
-                                                                                                   </div>
+                                                                                                   <?php }
+
+                                                                                                   ?>
+
+
                                                                                           </div>
                                                                                  </div>
                                                                         </div>
@@ -136,6 +176,34 @@ require('../../backend/config/users/session.php');
          <!-- Custom js for this page -->
          <script src="../../assets/js/dashboard.js"></script>
          <script src="../../assets/js/todolist.js"></script>
+         <script src="../../assets/js/jquery.js"></script>
+
+
+         <!-- <script>
+                  $(() => {
+                           const cartBtn = document.querySelectorAll('.cartBtn');
+                           cartBtn.forEach(el => {
+                                    console.log(el);
+                                    el.addEventListener('click', () => {
+                                             const cart_id = el.getAttribute('cardId')
+                                             console.log(cart_id);
+
+                                             $.ajax({
+                                                      url: "http://localhost/eazibolt/backend/ajaxcall/users/addtocart.php",
+                                                      method: "POST",
+                                                      data: {
+                                                               cart_id: cart_id,
+                                                               from: 'addtocart'
+                                                      },
+                                                      sucess: function(data) {
+                                                               console.log(data);
+                                                      }
+                                             })
+                                    })
+                           })
+                  })
+         </script> -->
+
 
 </body>
 
