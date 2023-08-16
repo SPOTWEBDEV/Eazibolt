@@ -6,6 +6,8 @@ require('../../backend/config/connection.php');
 require('../../backend/config/users/session.php');
 
 
+
+
 ?>
 
 
@@ -21,6 +23,7 @@ require('../../backend/config/users/session.php');
          <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
          <!-- End layout styles -->
          <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+
 </head>
 
 <body>
@@ -89,11 +92,14 @@ require('../../backend/config/users/session.php');
                                                                                                    <tbody>
                                                                                                             <?php
 
-                                                                                                            $select = mysqli_query($conection, "SELECT * FROM `withdrawal` WHERE `user_id`='$login_id'");
+                                                                                                            $select = mysqli_query($conection, "SELECT * FROM `withdrawal` WHERE `user_id`='$login_id' AND `status`=0");
                                                                                                             if (mysqli_num_rows($select)) {
                                                                                                                      $count = 0;
                                                                                                                      while ($fetch = mysqli_fetch_assoc($select)) {
                                                                                                                               $count++
+
+
+
                                                                                                             ?>
 
                                                                                                                               <tr>
@@ -102,7 +108,7 @@ require('../../backend/config/users/session.php');
                                                                                                                                        <td><?php echo $fetch['accountNumber']  ?> </td>
                                                                                                                                        <td><?php echo $fetch['bankname']  ?> </td>
                                                                                                                                        <td><?php echo $fetch['amount']  ?> </td>
-                                                                                                                                       <td> May 15, 2015 </td>
+                                                                                                                                       <td><time class="timeago" datetime="<?php echo $fetch['date'] ?>"></time> </td>
                                                                                                                               </tr>
 
                                                                                                                      <?php }
@@ -146,6 +152,14 @@ require('../../backend/config/users/session.php');
          <!-- Custom js for this page -->
          <script src="../../assets/js/dashboard.js"></script>
          <script src="../../assets/js/todolist.js"></script>
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script>
+                  jQuery(document).ready(function() {
+                           jQuery("time.timeago").timeago();
+                  });
+         </script>
 
 </body>
 

@@ -43,6 +43,7 @@ if (isset($_GET['status'])) {
                                     $insert = mysqli_query($conection , "INSERT INTO `deposit`(`id`, `user_id`, `amount`, `status`) VALUES ('','$login_id','$amountPaid','0')");
 
                                     $update = mysqli_query($conection , "UPDATE `clients` SET `balance`='$total' WHERE `id`='$login_id'");
+                                    $Notifications = mysqli_query($conection, "INSERT INTO `notification`(`id`, `user_id`, `message`, `time`) VALUES ('','$login_id','A deposite has been made to you account','$date')");
 
                                     if($insert && $update){
                                         header('location: ../../../../views/users/deposite.php');   

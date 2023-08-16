@@ -16,6 +16,9 @@ if (isset($_POST['withdrawal'])) {
 
     $hash_password = md5($pass);
 
+    date_default_timezone_set('Africa/Lagos');
+    $date = date("Y-m-d G:i:s");
+
     if (!empty($accountname) && !empty($accountnumber) && !empty($password) && !empty($bankname) && !empty($accountname)) {
         if ($hash_password == $password) {
             if ($amount <= $balance) {
@@ -26,8 +29,8 @@ if (isset($_POST['withdrawal'])) {
                     if (mysqli_num_rows($checkWithdrawalStatus)) {
                         $error_message = 'You already have a pending withdrawal';
                     } else {
-                        $insertIntoWidrawalTable = mysqli_query($conection, "INSERT INTO `withdrawal`(`id`, `user_id`, `bankname`, `accountNumber`, `accountName`, `amount`) VALUES ('','$login_id','$bankname','$accountnumber','$accountname','$amount')");
-
+                        $insertIntoWidrawalTable = mysqli_query($conection, "INSERT INTO `withdrawal`(`id`, `user_id`, `bankname`, `accountNumber`, `accountName`, `amount`,`date`) VALUES ('','$login_id','$bankname','$accountnumber','$accountname','$amount','$date')");
+                        $Notifications = mysqli_query($conection, "INSERT INTO `notification`(`id`, `user_id`, `message`, `time`) VALUES ('','$login_id','You have place a withdrawal','$date')");
                         if ($insertIntoWidrawalTable) {
                             $error_message = 'Successfully';
                         } else {
@@ -182,6 +185,14 @@ if (isset($_POST['withdrawal'])) {
     <!-- Custom js for this page -->
     <script src="../../assets/js/dashboard.js"></script>
     <script src="../../assets/js/todolist.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            jQuery("time.timeago").timeago();
+        });
+    </script>
 
 </body>
 

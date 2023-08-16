@@ -148,18 +148,18 @@ require('../../backend/config/users/session.php');
 
                         $selectReport = mysqli_query($conection, "SELECT * FROM `reportdriver` WHERE `user_id`='$login_id'");
                         if (mysqli_num_rows($selectReport)) {
-                          $count =0;
-                          while ($fetcgReport = mysqli_fetch_assoc($selectReport)){
+                          $count = 0;
+                          while ($fetcgReport = mysqli_fetch_assoc($selectReport)) {
                             $count++;
-                             if($fetcgReport['caseStatus'] == 0){
-                                $text = 'Pending';
-                             } 
-                             
+                            if ($fetcgReport['caseStatus'] == 0) {
+                              $text = 'Pending';
+                            }
+
                         ?>
 
 
                             <tr>
-                              <td><?php  echo $count ?></td>
+                              <td><?php echo $count ?></td>
                               <td>
                                 <img src="../../assets/images/faces/face1.jpg" class="me-2" alt="image"> David Grey
                               </td>
@@ -174,7 +174,8 @@ require('../../backend/config/users/session.php');
 
                           <?php
 
-                        } } else { ?>
+                          }
+                        } else { ?>
 
                           <caption>Empty Table</caption>
                         <?php
@@ -190,7 +191,7 @@ require('../../backend/config/users/session.php');
               </div>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-7 grid-margin stretch-card">
               <div class="card">
@@ -355,6 +356,15 @@ require('../../backend/config/users/session.php');
   <script src="../../assets/js/dashboard.js"></script>
   <script src="../../assets/js/todolist.js"></script>
 
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-</html>
+  <script>
+    jQuery(document).ready(function() {
+      jQuery("time.timeago").timeago();
+    });
+
+    </script>
+    </body>
+
+    </html>

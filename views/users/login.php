@@ -20,8 +20,14 @@ if (isset($_POST['loginBtn'])) {
           $select = mysqli_query($conection, "SELECT `id` FROM `clients` WHERE `email`='$email' AND `password`='$hash_password'");
           if (mysqli_num_rows($select)) {
                while ($row = mysqli_fetch_assoc($select)) {
+                    $id = $row['id'];
                     $_SESSION['login_id'] = $row['id'];
+                    date_default_timezone_set('Africa/Lagos');
+                    $date = date("Y-m-d G:i:s");
+                    $Notifications = mysqli_query($conection, "INSERT INTO `notification`(`id`, `user_id`, `message`, `time`) VALUES ('','$id','You sucessfully login','$date')");
                     header('location: ./dashboard.php');
+
+
                }
           } else {
                $error_message = "Login details is incorrect";

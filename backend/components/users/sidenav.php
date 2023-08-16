@@ -43,7 +43,7 @@
                   </div>
          </li>
          <li class="nav-item">
-                  <a class="nav-link" href="">
+                  <a class="nav-link" href="./bookride.php">
                            <span class="menu-title">Quik Ride</span>
                            <i class="mdi mdi-contacts menu-icon"></i>
                   </a>
@@ -102,7 +102,9 @@
                            <div class="border-bottom">
                                     <h6 class="font-weight-normal mb-3">Projects</h6>
                            </div>
-                           <button style="background:#155bd5;color:white" class="btn btn-block btn-lg   mt-4">Login as a Driver</button>
+                           <a href="./Driver/loginDriver.php">
+                                    <button style="background:#155bd5;color:white" class="btn btn-block btn-lg   mt-4">Login as a Driver</button>
+                           </a>
                   </span>
          </li>
 </ul>

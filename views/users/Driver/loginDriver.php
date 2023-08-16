@@ -226,7 +226,7 @@ $error_message = '';
                                                       </a>
                                              </li>
                                              <li class="nav-item">
-                                                      <a class="nav-link" href="./dashboard.php">
+                                                      <a class="nav-link" href="../dashboard.php">
                                                                <span class="menu-title">Dashboard</span>
                                                                <i class="mdi mdi-home menu-icon"></i>
                                                       </a>
@@ -239,10 +239,10 @@ $error_message = '';
                                                       </a>
                                                       <div class="collapse" id="ui-basic">
                                                                <ul class="nav flex-column sub-menu">
-                                                                        <li class="nav-item"> <a class="nav-link" href="./deposite.php">Depsoite</a></li>
-                                                                        <li class="nav-item"> <a class="nav-link" href="./withdrawal.php">Withdrawal</a></li>
-                                                                        <li class="nav-item"> <a class="nav-link" href="./withdrawalStatus.php">Withdrawal Status</a></li>
-                                                                        <li class="nav-item"> <a class="nav-link" href="./depositStatus.php">Deposit Status</a></li>
+                                                                        <li class="nav-item"> <a class="nav-link" href="../deposite.php">Depsoite</a></li>
+                                                                        <li class="nav-item"> <a class="nav-link" href="../withdrawal.php">Withdrawal</a></li>
+                                                                        <li class="nav-item"> <a class="nav-link" href="../withdrawalStatus.php">Withdrawal Status</a></li>
+                                                                        <li class="nav-item"> <a class="nav-link" href="../depositStatus.php">Deposit Status</a></li>
                                                                </ul>
                                                       </div>
                                              </li>
@@ -267,7 +267,7 @@ $error_message = '';
                                                       </a>
                                                       <div class="collapse" id="ui-shopping">
                                                                <ul class="nav flex-column sub-menu">
-                                                                        <li class="nav-item"> <a class="nav-link" href="./onlineshopping.php">Shoppping</a></li>
+                                                                        <li class="nav-item"> <a class="nav-link" href="../onlineshopping.php">Shoppping</a></li>
                                                                         <li class="nav-item"> <a class="nav-link" href="#">Cart list</a></li>
                                                                </ul>
                                                       </div>
