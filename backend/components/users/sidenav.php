@@ -36,9 +36,10 @@
                   <div class="collapse" id="ui-basic">
                            <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="./deposite.php">Depsoite</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="./depositStatus.php">Deposit Status</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./withdrawal.php">Withdrawal</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./withdrawalStatus.php">Withdrawal Status</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="./depositStatus.php">Deposit Status</a></li>
+
                            </ul>
                   </div>
          </li>
@@ -48,12 +49,12 @@
                            <i class="mdi mdi-contacts menu-icon"></i>
                   </a>
          </li>
-         <li class="nav-item">
+         <!-- <li class="nav-item">
                   <a class="nav-link" href="">
                            <span class="menu-title">Book Ride For Other</span>
                            <i class="mdi mdi-chart-bar menu-icon"></i>
                   </a>
-         </li>
+         </li> -->
 
          <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#ui-shopping" aria-expanded="false" aria-controls="ui-basic">
@@ -64,7 +65,7 @@
                   <div class="collapse" id="ui-shopping">
                            <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="./onlineshopping.php">Shoppping</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="#">Cart list</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="./cartlist.php">Cart list</a></li>
                            </ul>
                   </div>
          </li>
@@ -76,10 +77,10 @@
                   </a>
                   <div class="collapse" id="general-pages">
                            <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href=""> FAQ </a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="./faq.php"> FAQ </a></li>
                                     <li class="nav-item"> <a class="nav-link" href=""> Support </a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./Reportdriver.php"> Report Driver </a></li>
-                                    <li class="nav-item"> <a class="nav-link" href=""> Job </a></li>
+                                    <!-- <li class="nav-item"> <a class="nav-link" href=""> Job </a></li> -->
                            </ul>
                   </div>
          </li>
@@ -99,9 +100,9 @@
          </li>
          <li class="nav-item sidebar-actions">
                   <span class="nav-link">
-                           <div class="border-bottom">
+                           <!-- <div class="border-bottom">
                                     <h6 class="font-weight-normal mb-3">Projects</h6>
-                           </div>
+                           </div> -->
                            <a href="./Driver/loginDriver.php">
                                     <button style="background:#155bd5;color:white" class="btn btn-block btn-lg   mt-4">Login as a Driver</button>
                            </a>

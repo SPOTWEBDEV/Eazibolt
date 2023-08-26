@@ -6,6 +6,12 @@
                   </a>
          </li>
          <li class="nav-item">
+                  <a class="nav-link" href="./Users.php">
+                           <span class="menu-title">Clients</span>
+                           <i class="mdi mdi-home menu-icon"></i>
+                  </a>
+         </li>
+         <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                            <span class="menu-title">Transcations</span>
                            <i class="menu-arrow"></i>
@@ -13,8 +19,6 @@
                   </a>
                   <div class="collapse" id="ui-basic">
                            <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="./deposite.php">Depsoite</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="./withdrawal.php">Withdrawal</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./withdrawalStatus.php">Withdrawal Status</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./depositStatus.php">Deposit Status</a></li>
                            </ul>

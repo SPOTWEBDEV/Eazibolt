@@ -9,11 +9,11 @@ if (isset($_POST['cartBtn'])) {
          $cardId = $_POST['cardId'];
 
 
-         $check = mysqli_query($conection , "SELECT * FROM `cart` WHERE `user_id`='$userLogin' AND `card_id`='$cardId' ");
+         $check = mysqli_query($conection, "SELECT * FROM `cart` WHERE `user_id`='$userLogin' AND `card_id`='$cardId' ");
 
-         if(mysqli_num_rows($check)){
+         if (mysqli_num_rows($check)) {
                   echo "<script>alert('This item is already add to cart')</script>";
-         }else{
+         } else {
                   $insertCart = mysqli_query($conection, "INSERT INTO `cart`(`user_id`, `card_id`) VALUES ('$userLogin','$cardId')");
 
                   if ($insertCart) {
@@ -22,8 +22,6 @@ if (isset($_POST['cartBtn'])) {
                            echo "<script>alert('NOT-SUCESSFULLY')</script>";
                   }
          }
-
-         
 }
 
 
@@ -47,7 +45,7 @@ if (isset($_POST['cartBtn'])) {
 
 <body>
          <div class="container-scroller">
-                  <div class="row p-0 m-0 proBanner" id="proBanner">
+                  <!-- <div class="row p-0 m-0 proBanner" id="proBanner">
                            <div class="col-md-12 p-0 m-0">
                                     <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
                                              <div class="ps-lg-1">
@@ -64,7 +62,7 @@ if (isset($_POST['cartBtn'])) {
                                              </div>
                                     </div>
                            </div>
-                  </div>
+                  </div> -->
                   <!-- partial:partials/_navbar.html -->
                   <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
                            <?php require('../../backend/components/users/navbar.php'); ?>
@@ -97,38 +95,42 @@ if (isset($_POST['cartBtn'])) {
                                                                <div class="col-lg-12 grid-margin stretch-card">
                                                                         <div class="card">
                                                                                  <div class="card-body">
-                                                                                          <div class="row">
+                                                                                          <div class="row d-flex align-items-center">
                                                                                                    <?php
 
                                                                                                    $select = mysqli_query($conection, "SELECT * FROM `items`WHERE `count`>0");
                                                                                                    while ($row = mysqli_fetch_assoc($select)) { ?>
 
-                                                                                                            <div class="col">
-                                                                                                                     <div class="card" style="width: 18rem;">
-                                                                                                                              <img style="height: 250px !important;" src="../../upload/item/<?php echo $row['image'] ?>" class="card-img-top" alt="...">
-                                                                                                                              <div class="card-body">
-                                                                                                                                       <h5 class="card-title"><?php echo $row['name']  ?></h5>
-                                                                                                                                       <p class="card-text"><?php echo $row['des']  ?></p>
-                                                                                                                              </div>
-                                                                                                                              <ul class="list-group list-group-flush">
-                                                                                                                                       <li class="list-group-item">Product Rating:⭐⭐⭐⭐</li>
-                                                                                                                                       <li class="list-group-item">Number of Buyer: <?php echo $row['sold'] ?></li>
-                                                                                                                                       <li class="list-group-item">Price : $<?php echo $row['amount']  ?></li>
-                                                                                                                                       <li class="list-group-item d-flex">Cart : <form method="POST">
-                                                                                                                                                         <input type="hidden" name="cardId" value="<?php echo $row['id'] ?>">
-                                                                                                                                                         <button style="margin-left: 20px !important;" class="btn btn-sm bg-primary text-white ml-2 cartBtn" id="cartBtn" name="cartBtn" cardId="<?php echo $row['id'] ?>">Add to cart</button>
-                                                                                                                                                </form>
-                                                                                                                                       </li>
-                                                                                                                                       <!-- <div style="display:flex; width:100%; justify-content:between !important; align-items:center; gap:10px">
-                                                                                                                                       <div style="width:50%; font-size:20px; text-transform:capitalize">price</div>
-                                                                                                                                       <div style="width: 50%; float:left;  display:flex; justify-content:flex-end;" class="mt-2"><button style="border: none;width:fit-content" class="bg-primary btn-lg text-white">$304</button></div>
-                                                                                                                              </div> -->
-                                                                                                                              </ul>
-                                                                                                                              <a href="./productship.php?product=<?php echo $row['id']  ?>" class="card-body">
-                                                                                                                                       <button style="border: none;width:100%" class="bg-primary btn-lg text-white">Buy: $<?php echo $row['amount']  ?></button>
-                                                                                                                              </a>
-                                                                                                                     </div>
 
+
+                                                                                                            <div class="col">
+                                                                                                                     <div class="card" style="height: 300px;">
+                                                                                                                              <div class="card-body bg-primary mt-3 rounded ">
+                                                                                                                                       <div class="card mb-3" style="">
+                                                                                                                                                <style>
+                                                                                                                                                         #holder-gride{
+                                                                                                                                                                  display: flex;
+                                                                                                                                                                  align-items: center;
+                                                                                                                                                                  justify-content: center;
+                                                                                                                                                                  flex-wrap: wrap;
+                                                                                                                                                         }
+                                                                                                                                                </style>
+                                                                                                                                                <div  style="display:flex; align-items:center">
+                                                                                                                                                         <div style="width:200px">
+                                                                                                                                                                  <img src="../../upload/item/<?php echo $row['image'] ?>" style="height:200px !important;" class="img-fluid rounded-start h-100" alt="...">
+                                                                                                                                                         </div>
+                                                                                                                                                         <div class="col-md-8">
+                                                                                                                                                                  <div class="card-body">
+                                                                                                                                                                           <h5 class="card-title"><?php echo $row['name'] ?></h5>
+                                                                                                                                                                           <p class="card-text">Price: <?php echo $row['des']  ?></p>
+                                                                                                                                                                           <p class="card-text">Price: <?php echo $row['amount']  ?></p>
+                                                                                                                                                                           <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                                                                                                                                                                  </div>
+                                                                                                                                                         </div>
+                                                                                                                                                </div>
+                                                                                                                                       </div>
+                                                                                                                              </div>
+                                                                                                                     </div>
                                                                                                             </div>
 
                                                                                                    <?php }

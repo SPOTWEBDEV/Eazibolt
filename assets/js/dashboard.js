@@ -1,3 +1,4 @@
+
 (function($) {
   'use strict';
   $(function() {
@@ -452,7 +453,7 @@
 
       var trafficChartData = {
         datasets: [{
-          data: [30, 30, 40],
+          data: [30, 30, 10],
           backgroundColor: [
             gradientStrokeBlue,
             gradientStrokeGreen,
@@ -477,9 +478,9 @@
     
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
-          'Search Engines',
-          'Direct Click',
-          'Bookmarks Click',
+          'Withdrawal',
+          'Deposit',
+          'Book Ride',
         ]
       };
       var trafficChartOptions = {

@@ -28,7 +28,7 @@ require('../../backend/config/users/session.php');
 
 <body>
          <div class="container-scroller">
-                  <div class="row p-0 m-0 proBanner" id="proBanner">
+                  <!-- <div class="row p-0 m-0 proBanner" id="proBanner">
                            <div class="col-md-12 p-0 m-0">
                                     <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
                                              <div class="ps-lg-1">
@@ -45,7 +45,7 @@ require('../../backend/config/users/session.php');
                                              </div>
                                     </div>
                            </div>
-                  </div>
+                  </div> -->
                   <!-- partial:partials/_navbar.html -->
                   <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
                            <?php require('../../backend/components/users/navbar.php'); ?>
@@ -96,7 +96,11 @@ require('../../backend/config/users/session.php');
                                                                                                             if (mysqli_num_rows($select)) {
                                                                                                                      $count = 0;
                                                                                                                      while ($fetch = mysqli_fetch_assoc($select)) {
-                                                                                                                              $count++
+                                                                                                                              $count++;
+
+                                                                                                                              if ($fetch['status'] == 0) {
+                                                                                                                                       $text = 'Pending';
+                                                                                                                              }
 
 
 
@@ -109,6 +113,8 @@ require('../../backend/config/users/session.php');
                                                                                                                                        <td><?php echo $fetch['bankname']  ?> </td>
                                                                                                                                        <td><?php echo $fetch['amount']  ?> </td>
                                                                                                                                        <td><time class="timeago" datetime="<?php echo $fetch['date'] ?>"></time> </td>
+                                                                                                                                       <td><label class="badge badge-gradient-danger"><?php echo $text ?></label></td>
+
                                                                                                                               </tr>
 
                                                                                                                      <?php }

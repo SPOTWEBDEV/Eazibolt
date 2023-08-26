@@ -108,7 +108,6 @@ require('../../backend/config/users/session.php');
                                                                                                                                                 <td>
                                                                                                                                                          <label class="badge badge-gradient-danger"><?php echo 'Sucessfully' ?></label>
                                                                                                                                                 </td>
-                                                                                                                                                <td><?php echo $row['date'] ?></td>
                                                                                                                                                 <th><time style="font-weight:100;text-transform:capitalize" class="timeago" datetime="<?php echo $row['date'] ?>"></time></th>
                                                                                                                                        </tr>
 
@@ -167,6 +166,15 @@ require('../../backend/config/users/session.php');
          <!-- Custom js for this page -->
          <script src="../../assets/js/dashboard.js"></script>
          <script src="../../assets/js/todolist.js"></script>
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+         <script>
+                  jQuery(document).ready(function() {
+                           jQuery("time.timeago").timeago();
+                  });
+         </script>
 
 </body>
 

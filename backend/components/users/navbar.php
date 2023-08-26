@@ -1,6 +1,6 @@
 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-         <a class="navbar-brand brand-logo" href="index.html"><img src="../../assets/images/logo.svg" alt="logo" /></a>
-         <a class="navbar-brand brand-logo-mini ml-10" href="index.html"><img height="60px" src="../../assets/images/logo.svg" alt="logo" /></a>
+         <a class="navbar-brand brand-logo" href="#"> <img style="height: 50px; width: 100px;" src="../../assets/images/eazibolt png5.png" alt="Logo" /></a>
+         <a class="navbar-brand brand-logo-mini ml-10" href="#"> <img style="height: 50px; width: 100px;" src="../../assets/images/eazibolt png5.png" alt="Logo" /></a>
 </div>
 <style>
          a:hover {
@@ -37,7 +37,7 @@
                                     </div>
                            </a>
                            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="./ActivityLog.php">
                                              <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="./signout.php?out_id=<?php echo $login_id ?>">
@@ -59,6 +59,12 @@
 
                                     <div>
 
+                                             <style>
+                                                      time {
+                                                               text-transform: capitalize;
+                                                      }
+                                             </style>
+
                                              <?php
 
                                              $query = mysqli_query($conection, "SELECT * FROM `notification` WHERE `user_id`='$login_id'  ORDER BY `time` DESC LIMIT 4  ");
@@ -70,6 +76,8 @@
                                                                         <h6 class="preview-subject ellipsis mb-1 font-weight-normal"><?php echo $row['message']  ?></h6>
                                                                         <p class="text-gray mb-0"> <time class="timeago" datetime="<?php echo $row['time'] ?>"></time> </td>
                                                                         </p>
+
+
                                                                </div>
                                                       </a>
 
