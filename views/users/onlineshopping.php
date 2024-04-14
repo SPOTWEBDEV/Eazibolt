@@ -106,7 +106,7 @@ if (isset($_POST['cartBtn'])) {
                                                                                                             <div class="col">
                                                                                                                      <div class="card" style="height: 300px;">
                                                                                                                               <div class="card-body bg-primary mt-3 rounded ">
-                                                                                                                                       <div class="card mb-3" style="">
+                                                                                                                                       <div class="card mb-3" >
                                                                                                                                                 <style>
                                                                                                                                                          #holder-gride{
                                                                                                                                                                   display: flex;

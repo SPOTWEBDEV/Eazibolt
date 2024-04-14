@@ -77,7 +77,7 @@ if (isset($_POST['regBtn'])) {
      <!-- Required meta tags -->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <title>Eazibolt - Registeration page</title>
+     <title>Eazibolt - Registeration Page</title>
      <link rel="stylesheet" href="../../assets/css/main.css">
      <!-- <link rel="stylesheet" href="../../assets/css/bootstrap.min.css"> -->
      <link rel="stylesheet" href="../../assets/css/style.css">

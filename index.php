@@ -1,3 +1,9 @@
+<?php
+
+include('./backend/config/connection.php')
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
@@ -10,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
 
-    <title>Eazibolt - Welcome page</title>
+    <title>Eazibolt</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/lineicons.css" />
     <link rel="stylesheet" href="./assets/css/tiny-slider.css" />
@@ -25,7 +31,7 @@
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg">
               <a class="navbar-brand" href="index.html">
-                <img style="height: 50px; width: 100px;" src="./assets/images/eazibolt png4.png" alt="Logo" />
+                <h1><?php echo $sitename ?></h1>
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
                 aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +82,7 @@
         <div class="sidebar-logo">
           <img style="height: 50px; width: 100px;" src="./assets/images/eazibolt png4.png" alt="Logo" />
         </div>
-        <p class="text">Eazibolt is a mobility solution that will allow users book and share the cost of a ride with similar transit patterns.</p>
+        <p class="text"> <?php echo $sitename ?> is a mobility solution that will allow users book and share the cost of a ride with similar transit patterns.</p>
 
         <div class="sidebar-menu">
           <h5 class="menu-title">Quick Links</h5>
@@ -104,7 +110,7 @@
             <div class="header-content">
               <h1>Book A Ride To Start Moving In Style</h1>
               <p>
-                Eazibolt is a mobility solution that will allow users book and share the cost of a ride with similar transit patterns.
+               <?php echo $sitename ?>is a mobility solution that will allow users book and share the cost of a ride with similar transit patterns.
               </p>
               
               <div class="button">
@@ -236,11 +242,11 @@
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-who" role="tabpanel" aria-labelledby="nav-who-tab">
-                    <p>Welcome to Eazibolt, the future of hassle-free and efficient transportation.Our core values represent the heart and soul of Eazibolt, guiding our actions and decisions in everything we do.</p>
+                    <p>Welcome to <?php echo $sitename ?>, the future of hassle-free and efficient transportation.Our core values represent the heart and soul of <?php echo $sitename ?>, guiding our actions and decisions in everything we do.</p>
                     
                   </div>
                   <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
-                    <p>At Eazibolt, our vision is to provide a seamless transportation experience for riders and drivers alike. We believe that getting around town should be effortless, reliable, and safe.</p>
+                    <p>At <?php echo $sitename ?>, our vision is to provide a seamless transportation experience for riders and drivers alike. We believe that getting around town should be effortless, reliable, and safe.</p>
                     
                     <p>Our platform leverages cutting-edge technology to connect riders with nearby drivers, making transportation accessible at the tap of a button.</p>
 
@@ -248,7 +254,7 @@
                   </div>
                   <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
                     <p>A reliable ride can be a deal-breaker or a day-maker. That’s why all kinds of organizations in all kinds of industries
-                    rely on Eazibolt Business to provide access to rides for their customers, employees, patients, students, and guests.</p>
+                    rely on <?php echo $sitename ?> Business to provide access to rides for their customers, employees, patients, students, and guests.</p>
                     <!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
                       form,
                       by injected humour.</p> -->
@@ -272,10 +278,10 @@
               <div class="content">
                 <h6>Services</h6>
                 <h2 class="fw-bold">Our Best Services</h2>
-                <p>
+                <!-- <p>
                   There are many variations of passages of Lorem Ipsum available,
                   but the majority have suffered alteration in some form.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -293,7 +299,7 @@
                 <!-- <i class="lni lni-capsule"></i> -->
               </div>
               <div class="service-content">
-                <h4>Ride with Eazibolt</h4>
+                <h4>Ride with <?php echo $sitename ?></h4>
                 <p>
                   Join hundreds of people enjoying a seamless transit experience in Enugu
                 </p>
@@ -308,7 +314,7 @@
               <div class="service-content">
                 <h4>Online Shopping</h4>
                 <p>
-                  With point hean with each ride, you can uses it to shopoing on Eazibolt
+                  With point hean with each ride, you can uses it to shopoing on <?php echo $sitename ?>
                 </p>
               </div>
             </div>
@@ -321,8 +327,7 @@
               <div class="service-content">
                 <h4>Customer Care</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                  eirmod tempor ividunt labor dolore magna.
+                  We provided 24 hours customer care service
                 </p>
               </div>
             </div>
@@ -361,7 +366,7 @@
             <div class="pricing-style-fourteen">
               <div class="table-head">
                 <h6 class="title">Starter</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
+                  <!-- <p>Lorem Ipsum is simply dummy text of the printing and industry.</p> -->
                   <div class="price">
                     <h2 class="amount">
                       <span class="currency">$</span>0<span class="duration">/mo </span>
@@ -376,7 +381,7 @@
               <div class="table-content">
                 <ul class="table-list">
                   <li> <i class="lni lni-checkmark-circle"></i> 3 free ride</li>
-                  <li> <i class="lni lni-checkmark-circle"></i>2 Eazibolt Coin a ride</li>
+                  <li> <i class="lni lni-checkmark-circle"></i>2 <?php echo $sitename ?> Coin a ride</li>
                 </ul>
               </div>
             </div>
@@ -385,7 +390,7 @@
             <div class="pricing-style-fourteen middle">
               <div class="table-head">
                 <h6 class="title">Exclusive</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
+                  <!-- <p>Lorem Ipsum is simply dummy text of the printing and industry.</p> -->
                   <div class="price">
                     <h2 class="amount">
                       <span class="currency">$</span>99<span class="duration">/mo </span>
@@ -400,7 +405,7 @@
               <div class="table-content">
                 <ul class="table-list">
                   <li> <i class="lni lni-checkmark-circle"></i> 15 ride per month</li>
-                  <li> <i class="lni lni-checkmark-circle"></i> 8 Eazibolt Coin a ride </li>
+                  <li> <i class="lni lni-checkmark-circle"></i> 8 <?php echo $sitename ?> Coin a ride </li>
                 </ul>
               </div>
             </div>
@@ -409,7 +414,7 @@
             <div class="pricing-style-fourteen">
               <div class="table-head">
                 <h6 class="title">Premium</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
+                  <!-- <p>Lorem Ipsum is simply dummy text of the printing and industry.</p> -->
                   <div class="price">
                     <h2 class="amount">
                       <span class="currency">$</span>150<span class="duration">/mo </span>
@@ -424,7 +429,7 @@
               <div class="table-content">
                 <ul class="table-list">
                   <li> <i class="lni lni-checkmark-circle"></i> 23 ride per month</li>
-                  <li> <i class="lni lni-checkmark-circle"></i> 16 Eazibolt Coin a ride </li>
+                  <li> <i class="lni lni-checkmark-circle"></i> 16 <?php echo $sitename ?> Coin a ride </li>
                 </ul>
                 </ul>
               </div>
@@ -445,7 +450,7 @@
                 <h6>Owner</h6>
                 <h2 class="fw-bold">Our Creative Owner</h2>
                 <p>
-                  My name is Ugwu Grace Uchechi and I am incredibly excited to embark on this groundbreaking journey as the founder and CEO of Eazibolt. With a passion for disruptive technology and a deep understanding of the transportation industry, I envisioned Eazibolt as a transformative force that will revolutionize how people travel from point A to B
+                  My name is Ugwu Grace Uchechi and I am incredibly excited to embark on this groundbreaking journey as the founder and CEO of <?php echo $sitename ?>. With a passion for disruptive technology and a deep understanding of the transportation industry, I envisioned Eazibolt as a transformative force that will revolutionize how people travel from point A to B
                 </p>
               </div>
             </div>
@@ -484,7 +489,7 @@
                   </ul>
                 </div>
                 <h4 class="team-name">Grace Ugwu</h4>
-                <span class="sub-title">Web Developer And Founder Eazibolt Organisation</span>
+                <span class="sub-title">Web Developer And Founder <?php echo $sitename ?> Organisation</span>
               </div>
             </div>
 
@@ -529,10 +534,10 @@
               <div class="content">
                 <h6>Customer Reviews</h6>
                 <h2 class="fw-bold">Our Testimonials</h2>
-                <p>
+                <!-- <p>
                   There are many variations of passages of Lorem Ipsum available,
                   but the majority have suffered alteration in some form.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -564,12 +569,12 @@
                   <i class="lni lni-quotation"></i>
                 </div>
                 <p class="text">
-                  On the other hand denoun with righteous and disliks men who
-                  are beguiled demorae momentc blinded by desire that can
-                </p>
+                  I can't say enough good things about my experiences with <?php echo $sitename ?> rides. The drivers are always friendly and professional,
+                  and the app is so easy to use. Whether I'm heading to work or a night out, I know I can count on <?php echo $sitename ?> to get me there
+                  safely and comfortably.</p>
                 <div class="author">
                   <div class="image">
-                    <img src="assets/images/author-1.jpg" alt="Author" />
+                    <img src="assets/images/testimony.jpg" alt="Author" />
                   </div>
                   <h4 class="name">
                     Musharof Chowdhury
@@ -601,12 +606,12 @@
                   <i class="lni lni-quotation"></i>
                 </div>
                 <p class="text">
-                  On the other hand denoun with righteous and disliks men who
-                  are beguiled demorae momentc blinded by desire that can
+                <?php echo $sitename ?> has made my daily commute a breeze. The drivers are consistently on time, and I appreciate the affordable pricing.
+                  It's the most convenient and efficient ride-hailing app I've ever used.
                 </p>
                 <div class="author">
                   <div class="image">
-                    <img src="assets/images/author-2.jpg" alt="Author" />
+                    <img src="assets/images/testimony2.jpg" alt="Author" />
                   </div>
                   <h4 class="name">
                     David Warner
@@ -638,12 +643,11 @@
                   <i class="lni lni-quotation"></i>
                 </div>
                 <p class="text">
-                  On the other hand denoun with righteous and disliks men who
-                  are beguiled demorae momentc blinded by desire that can
-                </p>
+                  As a frequent traveler, I rely on <?php echo $sitename ?> in cities all over the Enugu State. It's comforting to know that no matter where I am,
+                  I can always find a reliable and affordable ride. <?php echo $sitename ?> has become an essential part of my travel routine.</p>
                 <div class="author">
                   <div class="image">
-                    <img src="assets/images/author-3.jpg" alt="Author" />
+                    <img src="assets/images/testimony1.jpg" alt="Author" />
                   </div>
                   <h4 class="name">
                     Jems Gilario
@@ -675,12 +679,12 @@
                   <i class="lni lni-quotation"></i>
                 </div>
                 <p class="text">
-                  On the other hand denoun with righteous and disliks men who
-                  are beguiled demorae momentc blinded by desire that can
+                I've tried various ride-hailing apps, but Bolt stands out for its exceptional service. The drivers are polite, the cars
+                are clean, and the fares are competitive. Bolt has earned my trust, and I wouldn't choose any other service.
                 </p>
                 <div class="author">
                   <div class="image">
-                    <img src="assets/images/author-4.jpg" alt="Author" />
+                    <img src="assets/images/testimony5.jpg" alt="Author" />
                   </div>
                   <h4 class="name">
                     David Warner
@@ -712,12 +716,12 @@
                   <i class="lni lni-quotation"></i>
                 </div>
                 <p class="text">
-                  On the other hand denoun with righteous and disliks men who
-                  are beguiled demorae momentc blinded by desire that can
-                </p>
+                I was introduced to Bolt by a friend, and it has changed the way I get around the city. The drivers are courteous, and
+                the app's features, like estimated fares and driver ratings, make every ride a pleasant experience. I'm a Bolt loyalist
+                now!</p>
                 <div class="author">
                   <div class="image">
-                    <img src="assets/images/author-5.jpg" alt="Author" />
+                    <img src="assets/images/testimony5.jpg" alt="Author" />
                   </div>
                   <h4 class="name">
                     Naimur Rahman
@@ -742,10 +746,10 @@
               <div class="content">
                 <h6>latest news</h6>
                 <h2 class="fw-bold">Latest News & Blog</h2>
-                <p>
+                <!-- <p>
                   There are many variations of passages of Lorem Ipsum available,
                   but the majority have suffered alteration in some form.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -762,18 +766,19 @@
               <div class="image">
                 <a href="javascript:void(0)"><img class="thumb" src="assets/images/1.jpg" alt="Blog" /></a>
                 <div class="meta-details">
-                  <img class="thumb" src="assets/images/b6.jpg" alt="Author" />
+                  <img class="thumb" src="assets/images/owner.jpeg" alt="Author" />
                   <span>BY TIM NORTON</span>
                 </div>
               </div>
               <div class="content-body">
                 <h4 class="title">
-                  <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                  <a href="javascript:void(0)">Welcome to new clients </a>
                 </h4>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard.
+                  My name is Ugwu Grace Uchechi and I am incredibly excited to embark on this groundbreaking journey as the founder and
+                  CEO of <?php echo $sitename ?>. With a passion for disruptive technology and a deep understanding of the transportation industry, I
+                  envisioned <?php echo $sitename ?> as a transformative force that will revolutionize how people travel from point A to B
+
                 </p>
               </div>
             </div>
@@ -783,22 +788,20 @@
 
             <div class="single-news">
               <div class="image">
-                <a href="javascript:void(0)"><img class="thumb" src="assets/images/2.jpg" alt="Blog" /></a>
+                <a href="javascript:void(0)"><img class="thumb" src="https://images.pexels.com/photos/2155552/pexels-photo-2155552.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Blog" /></a>
                 <div class="meta-details">
-                  <img class="thumb" src="assets/images/b6.jpg" alt="Author" />
+                  <img class="thumb" src="assets/images/owner.jpeg" alt="Author" />
                   <span>BY TIM NORTON</span>
                 </div>
               </div>
               <div class="content-body">
                 <h4 class="title">
                   <a href="javascript:void(0)">
-                    The newest web framework that changed the world
+                    New Project Online Shopping
                   </a>
                 </h4>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard.
+                   You can now buy online goods from <?php echo $sitename ?> website
                 </p>
               </div>
             </div>
@@ -808,22 +811,20 @@
 
             <div class="single-news">
               <div class="image">
-                <a href="javascript:void(0)"><img class="thumb" src="assets/images/3.jpg" alt="Blog" /></a>
+                <a href="javascript:void(0)"><img class="thumb" src="https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Blog" /></a>
                 <div class="meta-details">
-                  <img class="thumb" src="assets/images/b6.jpg" alt="Author" />
+                  <img class="thumb" src="assets/images/owner.jpeg" alt="Author" />
                   <span>BY TIM NORTON</span>
                 </div>
               </div>
               <div class="content-body">
                 <h4 class="title">
                   <a href="javascript:void(0)">
-                    5 ways to improve user retention for your startup
+                    How to earn <?php echo $sitename ?> coin
                   </a>
                 </h4>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard.
+                  you can earn <?php echo $sitename ?> coin buy book a ride and having an active activity status
                 </p>
               </div>
             </div>
@@ -897,10 +898,10 @@
                     <h2>
                       Ready to Get Started
                     </h2>
-                    <p>
+                    <!-- <p>
                       At vero eos et accusamus et iusto odio dignissimos ducimus
                       quiblanditiis praesentium
-                    </p>
+                    </p> -->
                   </div>
                 </div>
               </div>

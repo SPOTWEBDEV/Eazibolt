@@ -17,7 +17,7 @@ require('../../backend/config/users/session.php');
          <!-- Required meta tags -->
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <title>Eazibolt - User Dashbard</title>
+         <title>Eazibolt - User CartList Page</title>
          <link rel="stylesheet" href="../../assets/css/main.css">
          <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
          <!-- End layout styles -->
@@ -27,7 +27,7 @@ require('../../backend/config/users/session.php');
 
 <body>
          <div class="container-scroller">
-                  <div class="row p-0 m-0 proBanner" id="proBanner">
+                  <!-- <div class="row p-0 m-0 proBanner" id="proBanner">
                            <div class="col-md-12 p-0 m-0">
                                     <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
                                              <div class="ps-lg-1">
@@ -44,7 +44,7 @@ require('../../backend/config/users/session.php');
                                              </div>
                                     </div>
                            </div>
-                  </div>
+                  </div> -->
                   <!-- partial:partials/_navbar.html -->
                   <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
                            <?php require('../../backend/components/users/navbar.php'); ?>
@@ -95,7 +95,7 @@ require('../../backend/config/users/session.php');
                                                                                                                                        <li class="list-group-item">Product Rating:⭐⭐⭐⭐</li>
                                                                                                                                        <li class="list-group-item">Number of Buyer: <?php echo $row['sold'] ?></li>
                                                                                                                                        <li class="list-group-item">Price : $<?php echo $row['amount']  ?></li>
-                                                                                                                                       
+
                                                                                                                                        <!-- <div style="display:flex; width:100%; justify-content:between !important; align-items:center; gap:10px">
                                                                                                                                        <div style="width:50%; font-size:20px; text-transform:capitalize">price</div>
                                                                                                                                        <div style="width: 50%; float:left;  display:flex; justify-content:flex-end;" class="mt-2"><button style="border: none;width:fit-content" class="bg-primary btn-lg text-white">$304</button></div>

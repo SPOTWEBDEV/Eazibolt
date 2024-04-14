@@ -18,7 +18,7 @@ require('../../backend/config/users/session.php');
          <!-- Required meta tags -->
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <title>Eazibolt - User Withdrawal Status  Page</title>
+         <title>Eazibolt - Admin Clients List</title>
          <link rel="stylesheet" href="../../assets/css/main.css">
          <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
          <!-- End layout styles -->
@@ -48,13 +48,13 @@ require('../../backend/config/users/session.php');
                   </div> -->
                   <!-- partial:partials/_navbar.html -->
                   <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-                           <?php require('../../backend/components/users/navbar.php'); ?>
+                           <?php require('../../backend/components/admin/navbar.php'); ?>
                   </nav>
                   <!-- partial -->
                   <div class="container-fluid page-body-wrapper">
                            <!-- partial:partials/_sidebar.html -->
                            <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                                    <?php require('../../backend/components/users/sidenav.php'); ?>
+                                    <?php require('../../backend/components/admin/sidenav.php'); ?>
                            </nav>
                            <!-- partial -->
                            <div class="main-panel">
@@ -63,7 +63,7 @@ require('../../backend/config/users/session.php');
                                                       <h3 class="page-title">
                                                                <span class="page-title-icon bg-primary text-white me-2">
                                                                         <i class="mdi mdi-home"></i>
-                                                               </span> Withdrawal Status
+                                                               </span> All Users
                                                       </h3>
                                                       <nav aria-label="breadcrumb">
                                                                <ul class="breadcrumb">
@@ -82,38 +82,33 @@ require('../../backend/config/users/session.php');
                                                                                                    <thead>
                                                                                                             <tr>
                                                                                                                      <th> # </th>
-                                                                                                                     <th> Account Name </th>
-                                                                                                                     <th> Account Number </th>
-                                                                                                                     <th> Bank Name </th>
-                                                                                                                     <th> Amount </th>
-                                                                                                                     <th> Date </th>
+                                                                                                                     <th> Username </th>
+                                                                                                                     <th> Email </th>
+                                                                                                                     <th> Balanace </th>
+                                                                                                                     <th> Eazibolt Coin </th>
+                                                                                                                     
                                                                                                             </tr>
                                                                                                    </thead>
                                                                                                    <tbody>
                                                                                                             <?php
 
-                                                                                                            $select = mysqli_query($conection, "SELECT * FROM `withdrawal` WHERE `user_id`='$login_id' AND `status`=0");
+                                                                                                            $select = mysqli_query($conection, "SELECT * FROM `clients`");
                                                                                                             if (mysqli_num_rows($select)) {
                                                                                                                      $count = 0;
                                                                                                                      while ($fetch = mysqli_fetch_assoc($select)) {
                                                                                                                               $count++;
 
-                                                                                                                              if ($fetch['status'] == 0) {
-                                                                                                                                       $text = 'Pending';
-                                                                                                                              }
-
-
+                                                                                                                              
 
                                                                                                             ?>
 
                                                                                                                               <tr>
                                                                                                                                        <td> <?php echo $count++  ?> </td>
-                                                                                                                                       <td><?php echo $fetch['accountName']  ?> </td>
-                                                                                                                                       <td><?php echo $fetch['accountNumber']  ?> </td>
-                                                                                                                                       <td><?php echo $fetch['bankname']  ?> </td>
-                                                                                                                                       <td><?php echo $fetch['amount']  ?> </td>
-                                                                                                                                       <td><time class="timeago" datetime="<?php echo $fetch['date'] ?>"></time> </td>
-                                                                                                                                       <td><label class="badge badge-gradient-danger"><?php echo $text ?></label></td>
+                                                                                                                                       <td><?php echo $fetch['username']  ?> </td>
+                                                                                                                                       <td><?php echo $fetch['email']  ?> </td>
+                                                                                                                                       <td><?php echo $fetch['balance']  ?> </td>
+                                                                                                                                       <td><?php echo $fetch['EaziboltCoin']  ?> </td>
+                                                                                                                                       
 
                                                                                                                               </tr>
 
@@ -168,7 +163,5 @@ require('../../backend/config/users/session.php');
          </script>
 
 </body>
-
-
 
 </html>

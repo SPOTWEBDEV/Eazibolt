@@ -19,7 +19,7 @@ if (isset($_POST['appy'])) {
                   $check = mysqli_query($conection, "SELECT * FROM `appydriver` WHERE `user_id`='$userLogin'");
                   $alreadyAppyForJob = mysqli_num_rows($check);
                   if (mysqli_num_rows($check) > 0) {
-                           $error_message = 'You have already appy for the driver job';
+                           $error_message = 'You have already appied for the driver job';
                   } else {
                            $target_dir = "../../upload/Driver/";
                            $target_file = $target_dir . basename($_FILES["theimage"]["name"]);
@@ -70,7 +70,7 @@ if (isset($_POST['appy'])) {
 
 <body>
          <div class="container-scroller">
-                  <div class="row p-0 m-0 proBanner" id="proBanner">
+                  <!-- <div class="row p-0 m-0 proBanner" id="proBanner">
                            <div class="col-md-12 p-0 m-0">
                                     <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
                                              <div class="ps-lg-1">
@@ -87,12 +87,12 @@ if (isset($_POST['appy'])) {
                                              </div>
                                     </div>
                            </div>
-                  </div>
+                  </div> -->
                   <!-- partial:partials/_navbar.html -->
                   <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
                            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                                    <a class="navbar-brand brand-logo" href=""><img src="../../../assets/images/logo.svg" alt="logo" /></a>
-                                    <a class="navbar-brand brand-logo-mini ml-10" href="index.html"><img height="60px" src="../../assets/images/logo.svg" alt="logo" /></a>
+                                    <a class="navbar-brand brand-logo" href="#"><img height="130px" src="../../../assets/images/eazibolt png5.png" alt="logo" /></a>
+                                    <a class="navbar-brand brand-logo-mini ml-10" href="#"><img height="60px" src="../../../assets/images/eazibolt png5.png" alt="logo" /></a>
                            </div>
                            <div class="navbar-menu-wrapper d-flex align-items-stretch">
                                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -108,7 +108,7 @@ if (isset($_POST['appy'])) {
                                                       </div>
                                              </form>
                                     </div>
-                                    <ul class="navbar-nav navbar-nav-right">
+                                    <!-- <ul class="navbar-nav navbar-nav-right">
                                              <li class="nav-item nav-profile dropdown">
                                                       <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                                                                <div class="nav-profile-img">
@@ -230,7 +230,7 @@ if (isset($_POST['appy'])) {
                                                                <i class="mdi mdi-format-line-spacing"></i>
                                                       </a>
                                              </li>
-                                    </ul>
+                                    </ul> -->
                                     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                                              <span class="mdi mdi-menu"></span>
                                     </button>
@@ -244,7 +244,7 @@ if (isset($_POST['appy'])) {
                                              <li class="nav-item nav-profile">
                                                       <a href="#" class="nav-link">
                                                                <div class="nav-profile-image">
-                                                                        <img style="height: 80px;width:70px" src="../../../upload/Profile/<?php echo $img  ?>" alt="profile">
+                                                                        <img style="height: 100px;width:100px" src="../../../upload/Profile/<?php echo $img  ?>" alt="profile">
                                                                         <span class="login-status online"></span>
                                                                         <!--change to offline or busy as needed-->
                                                                </div>
@@ -372,10 +372,12 @@ if (isset($_POST['appy'])) {
                                                                $fetch = mysqli_query($conection, "SELECT * FROM `appydriver` WHERE `user_id`='$userLogin'");
                                                                while ($row = mysqli_fetch_assoc($fetch)) {
                                                                         $status = $row['status'];
+                                                                        $application_id = $row['id'];
+                                                                        $time = $row['date'];
                                                                }
                                                                if ($check > 0) { ?>
                                                                         <div class="card-body">
-                                                                                 <h4 class="card-title">Project Status</h4>
+                                                                                 <h4 class="card-title text-sucess">Hello <?php echo $username ?> this is your application status</h4>
                                                                                  <div class="table-responsive">
                                                                                           <table class="table">
                                                                                                    <thead>
@@ -388,8 +390,8 @@ if (isset($_POST['appy'])) {
                                                                                                    <tbody>
 
                                                                                                             <tr>
-                                                                                                                     <td> 5 </td>
-                                                                                                                     <td> Jun 05, 2015 </td>
+                                                                                                                     <td> <?php echo md5($application_id) ?> </td>
+                                                                                                                     <td><time class="timeago" datetime="<?php echo $time ?>"></time> </td>
                                                                                                                      <td>
 
                                                                                                                               <?php if ($status == 0) { ?>
@@ -449,6 +451,14 @@ if (isset($_POST['appy'])) {
          <!-- Custom js for this page -->
          <script src="../../../assets/js/dashboard.js"></script>
          <script src="../../../assets/js/todolist.js"></script>
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script>
+                  jQuery(document).ready(function() {
+                           jQuery("time.timeago").timeago();
+                  });
+         </script>
 
 </body>
 

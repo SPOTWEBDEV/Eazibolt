@@ -27,7 +27,7 @@ if (isset($_POST['appy'])) {
                            if ($realImage !== false) {
                                     if (move_uploaded_file($_FILES["theimage"]["tmp_name"], $target_file)) {
                                              $image = basename($_FILES["theimage"]["name"]);
-                                             $insert = mysqli_query($conection, "INSERT INTO `appydriver`(`id`, `user_id`, `surname`, `firstname`, `lastname`, `address`, `state`,`image`) VALUES ('','$userLogin','$surname','$firstname','$lastname','$address','$state','$theimage')");
+                                             $insert = mysqli_query($conection, "INSERT INTO `appydriver`(`id`, `user_id`, `surname`, `firstname`, `lastname`, `address`, `state`,`image`) VALUES ('','$userLogin','$surname','$firstname','$lastname','$address','$state','$image')");
 
                                              if ($insert) {
                                                       $error_message = "Successfully";
@@ -121,7 +121,7 @@ if (isset($_POST['appy'])) {
                                                                if ($check > 0) { ?>
 
                                                                         <div class="card-body">
-                                                                                 <p>You already appy for the job</p>
+                                                                                 <p>You already appied for the job</p>
                                                                         </div>
 
                                                                <?php
@@ -164,8 +164,8 @@ if (isset($_POST['appy'])) {
                                                                                                    <input type="text" name="state" class="form-control" id="state" placeholder="State">
                                                                                           </div>
                                                                                           <div class="form-group">
-                                                                                                   <label for="state">CV</label>
-                                                                                                   <input type="file" name="theimage" class="form-control" id="state" placeholder="State">
+                                                                                                   <label for="state">Profile Picture</label>
+                                                                                                   <input type="file" name="theimage" class="form-control" >
                                                                                           </div>
 
                                                                                           <button style="background:#155bd5;color:white" name="appy" type="submit" class="btn ">Submit Request</button>

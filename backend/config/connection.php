@@ -13,4 +13,6 @@ if(!$conection){
 }
 
 
+   $sitename = "firstclass";
+
 ?>

@@ -59,7 +59,7 @@ if (isset($_POST['withdrawal'])) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Eazibolt - User Dashbard</title>
+    <title>Eazibolt - User Withdrawal Page</title>
 
     <!-- <link rel="stylesheet" href="../../assets/css/style.css"> -->
     <link rel="stylesheet" href="../../assets/css/main.css">

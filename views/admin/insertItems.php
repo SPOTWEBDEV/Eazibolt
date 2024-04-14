@@ -57,7 +57,7 @@ if (isset($_POST['items'])) {
          <!-- Required meta tags -->
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <title>Eazibolt - User Dashbard</title>
+         <title>Eazibolt - Admin Insert Shopping Items</title>
 
          <!-- <link rel="stylesheet" href="../../assets/css/style.css"> -->
          <link rel="stylesheet" href="../../assets/css/main.css">
@@ -124,7 +124,7 @@ if (isset($_POST['items'])) {
                                                                                           <input type="text" name="name" class="form-control" id="exampleInputAccountName" placeholder="Name Of item">
                                                                                  </div>
                                                                                  <div class="form-group">
-                                                                                          <label for="exampleInputBankName">Decri</label>
+                                                                                          <label for="exampleInputBankName">Descrition</label>
                                                                                           <input type="text" name="dec" class="form-control" id="exampleInputBankName" placeholder="Account Name">
                                                                                  </div>
                                                                                  <div class="form-group">
