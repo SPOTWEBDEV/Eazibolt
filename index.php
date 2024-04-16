@@ -31,7 +31,7 @@ include('./backend/config/connection.php')
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg">
               <a class="navbar-brand" href="index.html">
-                <h1><?php echo $sitename ?></h1>
+                <h3 style="color: white;"><?php echo $sitename ?></h3>
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
                 aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@ include('./backend/config/connection.php')
                     <a class="page-scroll" href="#services">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    <a class="page-scroll" href="#owner">Portfolio</a>
                   </li>
                   <li class="nav-item">
                     <a class="page-scroll" href="#pricing">Pricing</a>
@@ -446,7 +446,7 @@ include('./backend/config/connection.php')
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="content">
+              <div id="owner" class="content">
                 <h6>Owner</h6>
                 <h2 class="fw-bold">Our Creative Owner</h2>
                 <p>
@@ -973,7 +973,7 @@ include('./backend/config/connection.php')
                   </p>
                   <p class="copyright-text">
                     <span>© 2023 By SPOTWEDDEV.COM</span>Designed and Developed by
-                    <a href="javascript:void(0)" rel="nofollow"> Grace Ugwu </a>
+                    <a href="javascript:void(0)" rel="nofollow"> UNICAP</a>
                   </p>
                 </div>
 

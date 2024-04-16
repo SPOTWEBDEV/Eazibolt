@@ -1,5 +1,5 @@
 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-         <a class="navbar-brand brand-logo" href="#"> <img style="height: 50px; width: 100px;" src="../../assets/images/eazibolt png5.png" alt="Logo" /></a>
+         <a class="navbar-brand brand-logo" href="#"><h3><?php echo $sitename ?></h3></a>
          <a class="navbar-brand brand-logo-mini ml-10" href="#"> <img style="height: 50px; width: 100px;" src="../../assets/images/eazibolt png5.png" alt="Logo" /></a>
 </div>
 <style>

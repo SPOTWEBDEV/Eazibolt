@@ -108,19 +108,25 @@ $error_message = '';
                                              <div class="row">
                                                       <div class="card">
                                                                <div class="card-body bg-primary">
-                                                                        <button class="accordion">Section 1</button>
+                                                                        <button class="accordion">How can I book a ride with Unicap?</button>
                                                                         <div class="panel">
-                                                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                                 <p> 
+                                                                                   Booking a ride with Unicap is simple and convenient. You can book through our user-friendly website, mobile app, or by contacting our customer service representatives directly. We offer flexible booking options to accommodate your schedule.
+                                                                                 </p>
                                                                         </div>
 
-                                                                        <button class="accordion">Section 2</button>
+                                                                        <button class="accordion"> Are Unicap's drivers experienced and professional?</button>
                                                                         <div class="panel">
-                                                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                                 <p>
+                                                                                   Absolutely. Unicap takes pride in its team of highly trained and experienced drivers who are committed to providing safe, courteous, and reliable transportation services. Our drivers undergo rigorous screening processes and continuous training to ensure top-notch service.
+                                                                                 </p>
                                                                         </div>
 
-                                                                        <button class="accordion">Section 3</button>
+                                                                        <button class="accordion">What measures does Unicap take to ensure passenger safety and comfort?</button>
                                                                         <div class="panel">
-                                                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                                 <p>
+                                                                                  Passenger safety and comfort are our top priorities at Unicap. We maintain a strict adherence to safety regulations, regularly inspect and maintain our fleet, and implement advanced technology for real-time tracking and monitoring. Additionally, our vehicles are equipped with amenities to enhance passenger comfort during the journey.
+                                                                                 </p>
                                                                         </div>
                                                                </div>
                                                       </div>
