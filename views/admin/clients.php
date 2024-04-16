@@ -18,7 +18,7 @@ require('../../backend/config/users/session.php');
          <!-- Required meta tags -->
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <title>Eazibolt - Admin Clients List</title>
+         <title><?php echo $sitename ?> - Admin Clients List</title>
          <link rel="stylesheet" href="../../assets/css/main.css">
          <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
          <!-- End layout styles -->
@@ -85,7 +85,7 @@ require('../../backend/config/users/session.php');
                                                                                                                      <th> Username </th>
                                                                                                                      <th> Email </th>
                                                                                                                      <th> Balanace </th>
-                                                                                                                     <th> Eazibolt Coin </th>
+                                                                                                                     <th> <?php echo $sitename ?> </th>
                                                                                                                      
                                                                                                             </tr>
                                                                                                    </thead>

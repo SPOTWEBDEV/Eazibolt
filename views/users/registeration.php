@@ -77,7 +77,7 @@ if (isset($_POST['regBtn'])) {
      <!-- Required meta tags -->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <title>Eazibolt - Registeration Page</title>
+     <title><?php echo $sitename ?> - Registeration Page</title>
      <link rel="stylesheet" href="../../assets/css/main.css">
      <!-- <link rel="stylesheet" href="../../assets/css/bootstrap.min.css"> -->
      <link rel="stylesheet" href="../../assets/css/style.css">
@@ -103,7 +103,7 @@ if (isset($_POST['regBtn'])) {
                               <div class="col-md-6 grid-margin stretch-card">
                                    <div class="card">
                                         <div class="card-body">
-                                             <h4 style="font-size:30px;color:var(--primary)" class="card-title text-xl">Eazibolt User Registeration From</h4>
+                                             <h4 style="font-size:30px;color:var(--primary)" class="card-title text-xl"><?php echo $sitename ?> User Registeration From</h4>
                                              <?php
 
                                              if ($error_message != "") { ?>

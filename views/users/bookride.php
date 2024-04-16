@@ -46,7 +46,7 @@ if(isset($_POST['book'])){
          <!-- Required meta tags -->
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <title>Eazibolt - Book Ride</title>
+         <title><?php echo $sitename ?> - Book Ride</title>
          <link rel="stylesheet" href="../../assets/css/main.css">
          <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
          <!-- End layout styles -->

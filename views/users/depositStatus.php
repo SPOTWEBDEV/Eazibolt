@@ -16,7 +16,7 @@ require('../../backend/config/users/session.php');
          <!-- Required meta tags -->
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <title>Eazibolt - User Deposite Status Page</title>
+         <title><?php echo $sitename ?> - User Deposite Status Page</title>
          <link rel="stylesheet" href="../../assets/css/main.css">
          <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
          <!-- End layout styles -->

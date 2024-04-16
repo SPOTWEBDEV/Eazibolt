@@ -48,7 +48,7 @@ if (isset($_POST['loginBtn'])) {
      <!-- Required meta tags -->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <title>Eazibolt - Login page</title>
+     <title><?php echo $sitename ?> - Login page</title>
      <link rel="stylesheet" href="../../assets/css/main.css">
      <!-- <link rel="stylesheet" href="../../assets/css/bootstrap.min.css"> -->
      <link rel="stylesheet" href="../../assets/css/style.css">
@@ -78,7 +78,7 @@ if (isset($_POST['loginBtn'])) {
                               <div class="col-md-6 grid-margin stretch-card">
                                    <div class="card">
                                         <div class="card-body">
-                                             <h4 style="font-size:30px; color:var(--primary)" class="card-title text-xl">Eazibolt Login Page</h4>
+                                             <h4 style="font-size:30px; color:var(--primary)" class="card-title text-xl"><?php echo $sitename ?> Login Page</h4>
                                              <?php
 
                                              if ($error_message != "") { ?>

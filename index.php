@@ -16,7 +16,7 @@ include('./backend/config/connection.php')
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
 
-    <title>Eazibolt</title>
+    <title><?php echo $sitename ?> || HomePage</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/lineicons.css" />
     <link rel="stylesheet" href="./assets/css/tiny-slider.css" />

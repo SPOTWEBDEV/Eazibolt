@@ -11,7 +11,7 @@ if (isset($_POST['deposit'])) {
                   'amount' => $amount,
                   'currency' => 'NGN',
                   'payment_options' => 'card',
-                  'redirect_url' => 'http://localhost/Eazibolt\backend\config\users\Deposit\status.php',
+                  'redirect_url' => 'http://localhost/UniCap\backend\config\users\Deposit\status.php',
                   'customer' => [
                            'email' => $email,
                            'name' => $username
@@ -20,7 +20,7 @@ if (isset($_POST['deposit'])) {
                            'price' => $amount
                   ],
                   'customizations' => [
-                           'title' => 'Deposit To My Eazibolt Account',
+                           'title' => 'Deposit To My UniCap Account',
                            'description' => 'sample'
                   ]
          ];

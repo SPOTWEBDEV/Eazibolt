@@ -23,5 +23,12 @@
                            <i class="mdi mdi-home menu-icon"></i>
                   </a>
          </li>
+
+         <li class="nav-item">
+                  <a class="nav-link" href="#">
+                           <span class="menu-title">Add Drivers</span>
+                           <i class="mdi mdi-home menu-icon"></i>
+                  </a>
+         </li>
          
 </ul>

@@ -85,27 +85,27 @@
                   </div>
          </li>
          <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#general-driver" aria-expanded="false" aria-controls="general-pages">
+                  <!-- <a class="nav-link" data-bs-toggle="collapse" href="#general-driver" aria-expanded="false" aria-controls="general-pages">
                            <span class="menu-title">Driver</span>
                            <i class="menu-arrow"></i>
                            <i class="mdi mdi-medical-bag menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="general-driver">
+                  </a> -->
+                  <!-- <div class="collapse" id="general-driver">
                            <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="./appyDriver.php"> Appy for driver </a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./Driver/loginDriver.php"> Login as a Driver </a></li>
                                     <li class="nav-item"> <a class="nav-link" href="./Driver/application.php"> Application Status </a></li>
                            </ul>
-                  </div>
+                  </div> -->
          </li>
          <li class="nav-item sidebar-actions">
                   <span class="nav-link">
                            <!-- <div class="border-bottom">
                                     <h6 class="font-weight-normal mb-3">Projects</h6>
                            </div> -->
-                           <a href="./Driver/loginDriver.php">
+                           <!-- <a href="./Driver/loginDriver.php">
                                     <button style="background:#155bd5;color:white" class="btn btn-block btn-lg   mt-4">Login as a Driver</button>
-                           </a>
+                           </a> -->
                   </span>
          </li>
 </ul>
