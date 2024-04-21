@@ -973,7 +973,7 @@ include('./backend/config/connection.php')
                   </p>
                   <p class="copyright-text">
                     <span>© 2023 By SPOTWEDDEV.COM</span>Designed and Developed by
-                    <a href="javascript:void(0)" rel="nofollow"> UNICAP</a>
+                    <a href="javascript:void(0)" rel="nofollow"> UniCab</a>
                   </p>
                 </div>
 
