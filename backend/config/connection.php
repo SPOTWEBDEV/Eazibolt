@@ -13,6 +13,6 @@ if(!$conection){
 }
 
 
-   $sitename = "UniCap";
+   $sitename = "UniCab";
 
 ?>
