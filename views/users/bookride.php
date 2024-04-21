@@ -24,7 +24,7 @@ if(isset($_POST['book'])){
 
               if($bookride && $Notifications){
                         
-                           echo "<script>alert('THANK FOR BOOK A RIDE WITH EAZIBOLT')</script>";
+                           echo "<script>alert('THANKS FOR BOOK A RIDE WITH UNiCAB')</script>";
 
               }else{
                            echo "<script>alert('FAILED TO BOOK A RIDE')</script>";
